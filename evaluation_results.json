@@ -1,0 +1,142 @@
+{
+  "dataset": {
+    "total": 1230,
+    "train": 984,
+    "test": 246,
+    "categories": 8,
+    "subcategories": 22,
+    "sops": 30,
+    "restricted": 58,
+    "duplicate_clusters": 37,
+    "tickets_in_clusters": 234
+  },
+  "classification": {
+    "category": {
+      "accuracy": 0.943089430894309,
+      "macro_f1": 0.9445182006029853
+    },
+    "subcategory": {
+      "accuracy": 0.9105691056910569,
+      "macro_f1": 0.9130475622187336
+    },
+    "priority": {
+      "accuracy": 0.6829268292682927,
+      "macro_f1": 0.607343651304896
+    },
+    "user_selected_category_accuracy": 0.8617886178861789
+  },
+  "retrieval": {
+    "duplicate_queries": 40,
+    "hit_at_1": 0.55,
+    "hit_at_3": 0.8,
+    "hit_at_5": 0.825,
+    "mrr": 0.6764880952380953,
+    "precision_at_5_same_subcategory": 0.8747967479674797,
+    "top5_from_other_category": 0.05528455284552846,
+    "restricted_leaks": 0
+  },
+  "duplicate_suggestion": {
+    "tickets_with_earlier_duplicate": 185,
+    "tickets_without": 751,
+    "by_threshold": [
+      {
+        "threshold": 0.15,
+        "caught": 0.972972972972973,
+        "false_suggestion_rate": 0.2436750998668442,
+        "precision": 0.4904632152588556
+      },
+      {
+        "threshold": 0.2,
+        "caught": 0.9459459459459459,
+        "false_suggestion_rate": 0.19174434087882822,
+        "precision": 0.541795665634675
+      },
+      {
+        "threshold": 0.25,
+        "caught": 0.8918918918918919,
+        "false_suggestion_rate": 0.14647137150466044,
+        "precision": 0.5913978494623656
+      },
+      {
+        "threshold": 0.3,
+        "caught": 0.827027027027027,
+        "false_suggestion_rate": 0.12250332889480692,
+        "precision": 0.6144578313253012
+      },
+      {
+        "threshold": 0.35,
+        "caught": 0.772972972972973,
+        "false_suggestion_rate": 0.10252996005326231,
+        "precision": 0.6383928571428571
+      },
+      {
+        "threshold": 0.45,
+        "caught": 0.6486486486486487,
+        "false_suggestion_rate": 0.08388814913448735,
+        "precision": 0.6417112299465241
+      },
+      {
+        "threshold": 0.55,
+        "caught": 0.5675675675675675,
+        "false_suggestion_rate": 0.06790945406125166,
+        "precision": 0.6645569620253164
+      }
+    ],
+    "threshold_in_use": 0.25
+  },
+  "recommendation": {
+    "evaluated": 240,
+    "recommendation_shown": 216,
+    "coverage": 0.9,
+    "top1_when_shown": 0.8981481481481481,
+    "top3_when_shown": 0.9259259259259259,
+    "by_confidence": {
+      "high": {
+        "count": 191,
+        "top1": 0.9214659685863874,
+        "top3": 0.93717277486911
+      },
+      "medium": {
+        "count": 25,
+        "top1": 0.72,
+        "top3": 0.84
+      },
+      "low": {
+        "count": 24,
+        "top1": 0.16666666666666666,
+        "top3": 0.25
+      }
+    }
+  },
+  "fallback": {
+    "challenge_total": 12,
+    "challenge_flagged_low": 11,
+    "by_kind": {
+      "vague": "4 of 4",
+      "out of scope": "5 of 5",
+      "contradictory": "2 of 3"
+    },
+    "in_scope_low_rate": 0.1
+  },
+  "mttr": {
+    "simulated": true,
+    "tickets": 240,
+    "baseline_mttr_minutes": 294.3875,
+    "assisted_mttr_minutes": 256.7416666666667,
+    "mttr_reduction": 0.1278785048051745,
+    "baseline_handling_minutes": 108.42083333333333,
+    "assisted_handling_minutes": 70.775,
+    "handling_reduction": 0.347219553437608,
+    "assumptions": {
+      "review_minutes": 2,
+      "false_lead_minutes": 10
+    }
+  },
+  "thresholds": {
+    "CAT_CONF_MIN": 0.5,
+    "SIM_MIN": 0.3,
+    "SOP_SHARE_MIN": 0.5,
+    "HIGH_SIM": 0.45,
+    "DUP_SIM": 0.25
+  }
+}
